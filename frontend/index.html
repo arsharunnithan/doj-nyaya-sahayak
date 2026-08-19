@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="pageTitle">
+        DoJ Nyaya Sahayak — Department of Justice
+    </title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- External Styles -->
+    <link rel="stylesheet" 
+          href="styles.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-content">
+
+        <span id="governmentText">
+            Government of India
+        </span>
+
+        <span id="ministryText">
+            Ministry of Law & Justice
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header class="main-header">
+
+    <div class="container">
+
+        <div class="header-content">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="bi bi-bank2"></i>
+                </div>
+
+                <div>
+
+                    <div
+                        class="brand-title"
+                        id="dojTitle"
+                    >
+                        Department of Justice
+                    </div>
+
+                    <div
+                        class="brand-subtitle"
+                        id="dojSubtitle"
+                    >
+                        Ministry of Law and Justice, Government of India
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="d-flex align-items-center gap-2">
+
+                <div
+                    class="prototype-badge"
+                    id="prototypeBadge"
+                >
+                    NYAYA SAHAYAK • PROTOTYPE
+                </div>
+
+                <button
+                    class="language-button"
+                    id="languageButton"
+                    onclick="changeLanguage()"
+                >
+                    हिंदी
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div
+            class="hero-badge"
+            id="heroBadge"
+        >
+            <i class="bi bi-stars"></i>
+            Digital Justice Assistance
+        </div>
+
+        <h1 id="heroTitle">
+            Meet <span>Nyaya Sahayak</span>
+        </h1>
+
+        <p
+            class="hero-description"
+            id="heroDescription"
+        >
+            Your smart assistant for accessing Department of Justice
+            information. Ask questions in your own words and get
+            clear, relevant answers without searching through
+            complicated government websites.
+        </p>
+
+        <div>
+
+            <button
+                class="hero-btn"
+                id="heroButton"
+                onclick="openChat()"
+            >
+                <i class="bi bi-chat-dots-fill me-2"></i>
+                Ask Nyaya Sahayak
+            </button>
+
+            <button
+                class="hero-secondary-btn"
+                id="exploreButton"
+                onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})"
+            >
+                Explore Services
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section
+    class="services-section"
+    id="services"
+>
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <div
+                class="section-label"
+                id="sectionLabel"
+            >
+                What you can ask
+            </div>
+
+            <h2
+                class="section-title"
+                id="servicesTitle"
+            >
+                Justice Services at Your Fingertips
+            </h2>
+
+            <p
+                class="section-description"
+                id="servicesDescription"
+            >
+                Simply ask your question naturally. Nyaya Sahayak
+                helps you find information across important
+                Department of Justice services.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- CASE INFORMATION -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('case')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h5 id="caseTitle">
+                        Case Information
+                    </h5>
+
+                    <p id="caseDescription">
+                        Check case status and understand
+                        case pendency information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAFFIC FINES -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('traffic')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+
+                    <h5 id="trafficTitle">
+                        Traffic Fines
+                    </h5>
+
+                    <p id="trafficDescription">
+                        Learn how to pay traffic fines
+                        and challans online.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ECOURTS -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('ecourts')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+
+                    <h5 id="ecourtsTitle">
+                        eCourts Services
+                    </h5>
+
+                    <p id="ecourtsDescription">
+                        Learn about the eCourts app,
+                        eFiling and ePay services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LIVE STREAMING -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('streaming')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-camera-video"></i>
+                    </div>
+
+                    <h5 id="streamingTitle">
+                        Court Live Streaming
+                    </h5>
+
+                    <p id="streamingDescription">
+                        Find information about live
+                        streaming of court proceedings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- JUDGES -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('judges')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-person-badge"></i>
+                    </div>
+
+                    <h5 id="judgesTitle">
+                        Judges & Vacancies
+                    </h5>
+
+                    <p id="judgesDescription">
+                        Access information about judges,
+                        vacancies and court strength.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEGAL ASSISTANCE -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="service-card"
+                    onclick="serviceClick('legal')"
+                >
+
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h5 id="legalTitle">
+                        Legal Assistance
+                    </h5>
+
+                    <p id="legalDescription">
+                        Learn about Tele-Law and other
+                        available legal assistance services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FLOATING CHAT BUTTON -->
+
+<button
+    class="chat-btn-floating"
+    id="chatButton"
+    onclick="toggleChat()"
+    aria-label="Open Nyaya Sahayak"
+>
+
+    <span class="chat-pulse"></span>
+
+    <i class="bi bi-chat-dots-fill"></i>
+
+</button>
+
+
+<!-- CHAT WINDOW -->
+
+<div
+    class="chat-card-floating"
+    id="chatWidget"
+>
+
+    <!-- CHAT HEADER -->
+
+    <div class="chat-header">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center gap-2">
+
+                <div class="assistant-avatar">
+                    <i class="bi bi-bank2"></i>
+                </div>
+
+                <div>
+
+                    <div
+                        class="assistant-name"
+                        id="chatTitle"
+                    >
+                        DoJ Nyaya Sahayak
+                    </div>
+
+                    <div
+                        class="online-status"
+                        id="onlineStatus"
+                    >
+                        ● Online
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="d-flex gap-2">
+
+                <button
+                    class="btn btn-sm text-white"
+                    onclick="clearChat()"
+                    title="Clear chat"
+                    id="clearButton"
+                >
+                    <i class="bi bi-trash3"></i>
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    onclick="toggleChat()"
+                    aria-label="Close chat"
+                ></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHAT MESSAGES -->
+
+    <div
+        class="chat-body-scroll"
+        id="chatContainer"
+    ></div>
+
+
+    <!-- TYPING INDICATOR -->
+
+    <div
+        class="typing-indicator mx-3 mb-2"
+        id="typingIndicator"
+    >
+
+        <span id="typingText">
+            Assistant is typing
+        </span>
+
+        <span class="typing-dots">
+            <span>•</span>
+            <span>•</span>
+            <span>•</span>
+        </span>
+
+    </div>
+
+
+    <!-- CHAT FOOTER -->
+
+    <div class="chat-footer">
+
+        <div class="input-group">
+
+            <input
+                type="text"
+                id="userInput"
+                class="form-control chat-input"
+                placeholder="Ask your question..."
+                autocomplete="off"
+            >
+
+            <button
+                class="btn send-btn"
+                onclick="sendMessage()"
+                aria-label="Send message"
+            >
+                <i class="bi bi-send-fill"></i>
+            </button>
+
+        </div>
+
+        <div
+            class="chat-disclaimer"
+            id="chatDisclaimer"
+        >
+            Nyaya Sahayak provides information based on
+            its available knowledge base.
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-8">
+
+                <div
+                    class="footer-title"
+                    id="footerTitle"
+                >
+                    Department of Justice
+                </div>
+
+                <div id="footerMinistry">
+                    Ministry of Law and Justice, Government of India
+                </div>
+
+                <div
+                    class="mt-2"
+                    id="footerAssistant"
+                >
+                    DoJ Nyaya Sahayak — Citizen Information Assistant
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   BACKEND API
+===================================================== */
+
+const API_URL = "http://127.0.0.1:5000/chat";
+
+
+/* =====================================================
+   CURRENT LANGUAGE
+===================================================== */
+
+let currentLanguage = "en";
+
+
+
+/* =====================================================
+   TRANSLATIONS
+===================================================== */
+
+const translations = {
+
+    /* ================= ENGLISH ================= */
+
+    en: {
+
+        pageTitle: "DoJ Nyaya Sahayak — Department of Justice",
+
+        government: "Government of India",
+
+        ministry: "Ministry of Law & Justice",
+
+        dojTitle: "Department of Justice",
+
+        dojSubtitle:
+            "Ministry of Law and Justice, Government of India",
+
+        languageButton: "हिंदी",
+
+        heroBadge:
+            "Digital Justice Assistance",
+
+        heroTitle:
+            'Meet <span>Nyaya Sahayak</span>',
+
+        heroDescription:
+            "Your smart assistant for accessing Department of Justice information. Ask questions in your own words and get clear, relevant answers without searching through complicated government websites.",
+
+        heroButton:
+            "Ask Nyaya Sahayak",
+
+        exploreButton:
+            "Explore Services",
+
+        sectionLabel:
+            "What you can ask",
+
+        servicesTitle:
+            "Justice Services at Your Fingertips",
+
+        servicesDescription:
+            "Simply ask your question naturally. Nyaya Sahayak helps you find information across important Department of Justice services.",
+
+        caseTitle:
+            "Case Information",
+
+        caseDescription:
+            "Check case status and understand case pendency information.",
+
+        trafficTitle:
+            "Traffic Fines",
+
+        trafficDescription:
+            "Learn how to pay traffic fines and challans online.",
+
+        ecourtsTitle:
+            "eCourts Services",
+
+        ecourtsDescription:
+            "Learn about the eCourts app, eFiling and ePay services.",
+
+        streamingTitle:
+            "Court Live Streaming",
+
+        streamingDescription:
+            "Find information about live streaming of court proceedings.",
+
+        judgesTitle:
+            "Judges & Vacancies",
+
+        judgesDescription:
+            "Access information about judges, vacancies and court strength.",
+
+        legalTitle:
+            "Legal Assistance",
+
+        legalDescription:
+            "Learn about Tele-Law and other available legal assistance services.",
+
+        chatTitle:
+            "DoJ Nyaya Sahayak",
+
+        online:
+            "● Online",
+
+        clearChat:
+            "Clear chat",
+
+        welcome:
+            `<strong>Namaste! 🙏</strong>
+            <br><br>
+            I'm <strong>Nyaya Sahayak</strong>, your Department
+            of Justice information assistant.
+            <br><br>
+            Ask me about case status, traffic fines,
+            eCourts, eFiling, Tele-Law and more.`,
+
+        tryAsking:
+            "Try asking:",
+
+        typing:
+            "Assistant is typing",
+
+        placeholder:
+            "Ask your question...",
+
+        disclaimer:
+            "Nyaya Sahayak provides information based on its available knowledge base.",
+
+        footerTitle:
+            "Department of Justice",
+
+        footerMinistry:
+            "Ministry of Law and Justice, Government of India",
+
+        footerAssistant:
+            "DoJ Nyaya Sahayak — Citizen Information Assistant",
+
+        questionPrompt:
+            "What would you like to know?",
+
+        connectionError:
+            "I'm unable to connect to the assistant server right now. Please make sure the Python backend is running.",
+
+        noAnswer:
+            "Sorry, I couldn't find a relevant answer to your question.",
+
+        ratePrompt:
+            "Are you satisfied with this answer? Rate us:",
+
+        thankYouRating:
+            "Thank you for your rating!"
+
+    },
+
+
+    /* ================= HINDI ================= */
+
+    hi: {
+
+        pageTitle:
+            "DoJ न्याय सहायक — न्याय विभाग",
+
+        government:
+            "भारत सरकार",
+
+        ministry:
+            "कानून और न्याय मंत्रालय",
+
+        dojTitle:
+            "न्याय विभाग",
+
+        dojSubtitle:
+            "कानून और न्याय मंत्रालय, भारत सरकार",
+
+        languageButton:
+            "മലയാളം",
+
+        heroBadge:
+            "डिजिटल न्याय सहायता",
+
+        heroTitle:
+            'मिलिए <span>न्याय सहायक</span> से',
+
+        heroDescription:
+            "न्याय विभाग की जानकारी प्राप्त करने के लिए आपका स्मार्ट सहायक। अपने सवाल सामान्य भाषा में पूछें और जटिल सरकारी वेबसाइटों को खोजे बिना स्पष्ट और उपयोगी जानकारी प्राप्त करें।",
+
+        heroButton:
+            "न्याय सहायक से पूछें",
+
+        exploreButton:
+            "सेवाएँ देखें",
+
+        sectionLabel:
+            "आप क्या पूछ सकते हैं",
+
+        servicesTitle:
+            "आपकी उंगलियों पर न्याय सेवाएँ",
+
+        servicesDescription:
+            "अपना सवाल सामान्य भाषा में पूछें। न्याय सहायक न्याय विभाग की महत्वपूर्ण सेवाओं से संबंधित जानकारी खोजने में आपकी सहायता करता है।",
+
+        caseTitle:
+            "मामले की जानकारी",
+
+        caseDescription:
+            "मामले की स्थिति और लंबित मामलों से संबंधित जानकारी प्राप्त करें।",
+
+        trafficTitle:
+            "यातायात जुर्माना",
+
+        trafficDescription:
+            "यातायात जुर्माना और चालान का ऑनलाइन भुगतान करने की जानकारी प्राप्त करें।",
+
+        ecourtsTitle:
+            "ई-कोर्ट सेवाएँ",
+
+        ecourtsDescription:
+            "ई-कोर्ट ऐप, ई-फाइलिंग और ई-पे सेवाओं के बारे में जानकारी प्राप्त करें।",
+
+        streamingTitle:
+            "अदालत की लाइव स्ट्रीमिंग",
+
+        streamingDescription:
+            "अदालत की कार्यवाही की लाइव स्ट्रीमिंग के बारे में जानकारी प्राप्त करें।",
+
+        judgesTitle:
+            "न्यायाधीश और रिक्तियाँ",
+
+        judgesDescription:
+            "न्यायाधीशों, रिक्त पदों और अदालतों की संख्या से संबंधित जानकारी प्राप्त करें।",
+
+        legalTitle:
+            "कानूनी सहायता",
+
+        legalDescription:
+            "टेली-लॉ और अन्य उपलब्ध कानूनी सहायता सेवाओं के बारे में जानकारी प्राप्त करें।",
+
+        chatTitle:
+            "न्याय सहायक",
+
+        online:
+            "● ऑनलाइन",
+
+        clearChat:
+            "चैट साफ़ करें",
+
+        welcome:
+            `<strong>नमस्ते! 🙏</strong>
+            <br><br>
+            मैं <strong>न्याय सहायक</strong> हूँ, आपका न्याय विभाग
+            सूचना सहायक।
+            <br><br>
+            मुझसे मामले की स्थिति, यातायात जुर्माना,
+            ई-कोर्ट, ई-फाइलिंग, टेली-लॉ और अन्य विषयों
+            के बारे में पूछें।`,
+
+        tryAsking:
+            "यह पूछकर देखें:",
+
+        typing:
+            "सहायक लिख रहा है",
+
+        placeholder:
+            "अपना सवाल पूछें...",
+
+        disclaimer:
+            "न्याय सहायक अपनी उपलब्ध जानकारी के आधार पर जानकारी प्रदान करता है।",
+
+        footerTitle:
+            "न्याय विभाग",
+
+        footerMinistry:
+            "कानून और न्याय मंत्रालय, भारत सरकार",
+
+        footerAssistant:
+            "DoJ न्याय सहायक — नागरिक सूचना सहायक",
+
+        questionPrompt:
+            "आप क्या जानना चाहते हैं?",
+
+        connectionError:
+            "अभी सहायक सर्वर से कनेक्ट नहीं हो पा रहा है। कृपया सुनिश्चित करें कि Python backend चल रहा है।",
+
+        noAnswer:
+            "क्षमा करें, मुझे आपके प्रश्न का उपयुक्त उत्तर नहीं मिल सका।",
+        
+        ratePrompt:
+            "क्या आप इस उत्तर से संतुष्ट हैं? रेटिंग दें:",
+
+        thankYouRating:
+            "आपकी रेटिंग के लिए धन्यवाद!"
+
+    },
+
+
+    /* ================= MALAYALAM ================= */
+
+    ml: {
+
+        pageTitle:
+            "DoJ ന്യായ സഹായി — നീതിന്യായ വകുപ്പ്",
+
+        government:
+            "ഭാരത സർക്കാർ",
+
+        ministry:
+            "നിയമ, നീതിന്യായ മന്ത്രാലയം",
+
+        dojTitle:
+            "നീതിന്യായ വകുപ്പ്",
+
+        dojSubtitle:
+            "നിയമ, നീതിന്യായ മന്ത്രാലയം, ഭാരത സർക്കാർ",
+
+        languageButton:
+            "English",
+
+        heroBadge:
+            "ഡിജിറ്റൽ നീതി സഹായം",
+
+        heroTitle:
+            'പരിചയപ്പെടാം <span>ന്യായ സഹായി</span>',
+
+        heroDescription:
+            "നീതിന്യായ വകുപ്പുമായി ബന്ധപ്പെട്ട വിവരങ്ങൾ ലഭ്യമാക്കുന്നതിനുള്ള നിങ്ങളുടെ സ്മാർട്ട് സഹായി. നിങ്ങളുടെ ചോദ്യങ്ങൾ സ്വാഭാവിക ഭാഷയിൽ ചോദിക്കൂ, സങ്കീർണ്ണമായ സർക്കാർ വെബ്‌സൈറ്റുകൾ തിരയാതെ വ്യക്തവും പ്രസക്തവുമായ വിവരങ്ങൾ നേടൂ.",
+
+        heroButton:
+            "ന്യായ സഹായിയോട് ചോദിക്കൂ",
+
+        exploreButton:
+            "സേവനങ്ങൾ കാണുക",
+
+        sectionLabel:
+            "നിങ്ങൾക്ക് എന്തൊക്കെ ചോദിക്കാം",
+
+        servicesTitle:
+            "നീതിന്യായ സേവനങ്ങൾ നിങ്ങളുടെ വിരൽത്തുമ്പിൽ",
+
+        servicesDescription:
+            "നിങ്ങളുടെ ചോദ്യം സ്വാഭാവികമായി ചോദിക്കൂ. നീതിന്യായ വകുപ്പിന്റെ പ്രധാനപ്പെട്ട സേവനങ്ങളുമായി ബന്ധപ്പെട്ട വിവരങ്ങൾ കണ്ടെത്താൻ ന്യായ സഹായി നിങ്ങളെ സഹായിക്കും.",
+
+        caseTitle:
+            "കേസ് വിവരങ്ങൾ",
+
+        caseDescription:
+            "കേസിന്റെ സ്ഥിതിയും കെട്ടിക്കിടക്കുന്ന കേസുകളുമായി ബന്ധപ്പെട്ട വിവരങ്ങളും പരിശോധിക്കാം.",
+
+        trafficTitle:
+            "ട്രാഫിക് പിഴകൾ",
+
+        trafficDescription:
+            "ട്രാഫിക് പിഴകളും ചലാനുകളും ഓൺലൈനായി അടയ്ക്കുന്നതിനുള്ള വിവരങ്ങൾ അറിയുക.",
+
+        ecourtsTitle:
+            "ഇ-കോടതി സേവനങ്ങൾ",
+
+        ecourtsDescription:
+            "ഇ-കോടതി ആപ്പ്, ഇ-ഫയലിംഗ്, ഇ-പേ സേവനങ്ങൾ എന്നിവയെക്കുറിച്ച് അറിയുക.",
+
+        streamingTitle:
+            "കോടതി ലൈവ് സ്ട്രീമിംഗ്",
+
+        streamingDescription:
+            "കോടതി നടപടികളുടെ ലൈവ് സ്ട്രീമിംഗുമായി ബന്ധപ്പെട്ട വിവരങ്ങൾ കണ്ടെത്തുക.",
+
+        judgesTitle:
+            "ജഡ്ജിമാരും ഒഴിവുകളും",
+
+        judgesDescription:
+            "ജഡ്ജിമാർ, ഒഴിവുള്ള തസ്തികകൾ, കോടതികളുടെ അംഗബലം എന്നിവയുമായി ബന്ധപ്പെട്ട വിവരങ്ങൾ ലഭ്യമാക്കുക.",
+
+        legalTitle:
+            "നിയമ സഹായം",
+
+        legalDescription:
+            "ടെലി-ലോയും ലഭ്യമായ മറ്റ് നിയമ സഹായ സേവനങ്ങളും സംബന്ധിച്ച വിവരങ്ങൾ അറിയുക.",
+
+        chatTitle:
+            "DoJ ന്യായ സഹായി",
+
+        online:
+            "● ഓൺലൈൻ",
+
+        clearChat:
+            "ചാറ്റ് മായ്ക്കുക",
+
+        welcome:
+            `<strong>നമസ്കാരം! 🙏</strong>
+            <br><br>
+            ഞാൻ <strong>ന്യായ സഹായി</strong> ആണ്, നിങ്ങളുടെ
+            നീതിന്യായ വകുപ്പ് വിവര സഹായി.
+            <br><br>
+            കേസ് സ്ഥിതി, ട്രാഫിക് പിഴകൾ, ഇ-കോടതി,
+            ഇ-ഫയലിംഗ്, ടെലി-ലോ തുടങ്ങിയ വിഷയങ്ങളെക്കുറിച്ച്
+            എന്നോട് ചോദിക്കാം.`,
+
+        tryAsking:
+            "ഇവ ചോദിച്ച് നോക്കൂ:",
+
+        typing:
+            "സഹായി ടൈപ്പ് ചെയ്യുന്നു",
+
+        placeholder:
+            "നിങ്ങളുടെ ചോദ്യം ചോദിക്കൂ...",
+
+        disclaimer:
+            "ന്യായ സഹായി ലഭ്യമായ അറിവിന്റെ അടിസ്ഥാനത്തിലാണ് വിവരങ്ങൾ നൽകുന്നത്.",
+
+        footerTitle:
+            "നീതിന്യായ വകുപ്പ്",
+
+        footerMinistry:
+            "നിയമ, നീതിന്യായ മന്ത്രാലയം, ഭാരത സർക്കാർ",
+
+        footerAssistant:
+            "DoJ ന്യായ സഹായി — പൗര വിവര സഹായി",
+
+        questionPrompt:
+            "നിങ്ങൾക്ക് എന്താണ് അറിയേണ്ടത്?",
+
+        connectionError:
+            "ഇപ്പോൾ സഹായക സെർവറുമായി ബന്ധപ്പെടാൻ കഴിയുന്നില്ല. Python backend പ്രവർത്തിക്കുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
+
+        noAnswer:
+            "ക്ഷമിക്കണം, നിങ്ങളുടെ ചോദ്യത്തിന് അനുയോജ്യമായ ഉത്തരം കണ്ടെത്താൻ കഴിഞ്ഞില്ല.",
+
+        ratePrompt:
+            "ഈ മറുപടിയിൽ നിങ്ങൾ തൃപ്തനാണോ? റേറ്റ് ചെയ്യുക:",
+
+        thankYouRating:
+            "നിങ്ങളുടെ റേറ്റിംഗിന് നന്ദി!"
+
+    }
+
+};
+
+
+/* =====================================================
+   SERVICE QUESTIONS
+===================================================== */
+
+const serviceData = {
+
+    case: {
+
+        enName: "Case Information",
+        hiName: "मामले की जानकारी",
+        mlName: "കേസ് വിവരങ്ങൾ",
+
+        enQuestions: [
+            "How do I check my case status?",
+            "How can I find case pendency information?",
+            "Where can I search for a case?"
+        ],
+
+        hiQuestions: [
+            "मैं अपने मामले की स्थिति कैसे जाँच सकता हूँ?",
+            "मैं लंबित मामलों की जानकारी कैसे प्राप्त कर सकता हूँ?",
+            "मैं किसी मामले की खोज कहाँ कर सकता हूँ?"
+        ],
+
+        mlQuestions: [
+            "എന്റെ കേസിന്റെ സ്ഥിതി എങ്ങനെ പരിശോധിക്കാം?",
+            "കെട്ടിക്കിടക്കുന്ന കേസുകളുടെ വിവരങ്ങൾ എങ്ങനെ ലഭിക്കും?",
+            "ഒരു കേസ് എവിടെ തിരയാം?"
+        ]
+
+    },
+
+
+    traffic: {
+
+        enName: "Traffic Fines",
+        hiName: "यातायात जुर्माना",
+        mlName: "ട്രാഫിക് പിഴകൾ",
+
+        enQuestions: [
+            "How do I pay my traffic challan?",
+            "How can I check my traffic fine?",
+            "Where can I pay a traffic violation?"
+        ],
+
+        hiQuestions: [
+            "मैं अपना ट्रैफिक चालान कैसे भर सकता हूँ?",
+            "मैं अपना ट्रैफिक जुर्माना कैसे जाँच सकता हूँ?",
+            "मैं ट्रैफिक उल्लंघन का भुगतान कहाँ कर सकता हूँ?"
+        ],
+
+        mlQuestions: [
+            "എന്റെ ട്രാഫിക് ചലാൻ എങ്ങനെ അടയ്ക്കാം?",
+            "എന്റെ ട്രാഫിക് പിഴ എങ്ങനെ പരിശോധിക്കാം?",
+            "ട്രാഫിക് നിയമലംഘനത്തിനുള്ള പിഴ എവിടെ അടയ്ക്കാം?"
+        ]
+
+    },
+
+
+    ecourts: {
+
+        enName: "eCourts Services",
+        hiName: "ई-कोर्ट सेवाएँ",
+        mlName: "ഇ-കോടതി സേവനങ്ങൾ",
+
+        enQuestions: [
+            "How can I download the eCourts app?",
+            "How do I use eFiling?",
+            "What is ePay?"
+        ],
+
+        hiQuestions: [
+            "मैं ई-कोर्ट ऐप कैसे डाउनलोड कर सकता हूँ?",
+            "मैं ई-फाइलिंग का उपयोग कैसे करूँ?",
+            "ई-पे क्या है?"
+        ],
+
+        mlQuestions: [
+            "ഇ-കോടതി ആപ്പ് എങ്ങനെ ഡൗൺലോഡ് ചെയ്യാം?",
+            "ഇ-ഫയലിംഗ് എങ്ങനെ ഉപയോഗിക്കാം?",
+            "ഇ-പേ എന്താണ്?"
+        ]
+
+    },
+
+
+    streaming: {
+
+        enName: "Court Live Streaming",
+        hiName: "अदालत की लाइव स्ट्रीमिंग",
+        mlName: "കോടതി ലൈവ് സ്ട്രീമിംഗ്",
+
+        enQuestions: [
+            "Which courts provide live streaming?",
+            "How can I watch court proceedings?",
+            "Where can I find court live streams?"
+        ],
+
+        hiQuestions: [
+            "कौन सी अदालतें लाइव स्ट्रीमिंग प्रदान करती हैं?",
+            "मैं अदालत की कार्यवाही कैसे देख सकता हूँ?",
+            "मुझे अदालत की लाइव स्ट्रीमिंग कहाँ मिल सकती है?"
+        ],
+
+        mlQuestions: [
+            "ഏത് കോടതികളിലാണ് ലൈവ് സ്ട്രീമിംഗ് ലഭ്യമാകുന്നത്?",
+            "കോടതി നടപടികൾ എങ്ങനെ കാണാം?",
+            "കോടതി ലൈവ് സ്ട്രീമിംഗ് എവിടെ ലഭിക്കും?"
+        ]
+
+    },
+
+
+    judges: {
+
+        enName: "Judges & Vacancies",
+        hiName: "न्यायाधीश और रिक्तियाँ",
+        mlName: "ജഡ്ജിമാരും ഒഴിവുകളും",
+
+        enQuestions: [
+            "How many judges are there in the Supreme Court?",
+            "What are the current High Court vacancies?",
+            "Where can I find district court information?"
+        ],
+
+        hiQuestions: [
+            "सर्वोच्च न्यायालय में कितने न्यायाधीश हैं?",
+            "उच्च न्यायालयों में वर्तमान रिक्तियाँ कितनी हैं?",
+            "मुझे जिला अदालतों की जानकारी कहाँ मिल सकती है?"
+        ],
+
+        mlQuestions: [
+            "സുപ്രീം കോടതിയിൽ എത്ര ജഡ്ജിമാരുണ്ട്?",
+            "ഹൈക്കോടതികളിലെ നിലവിലെ ഒഴിവുകൾ എത്രയാണ്?",
+            "ജില്ലാ കോടതികളുടെ വിവരങ്ങൾ എവിടെ ലഭിക്കും?"
+        ]
+
+    },
+
+
+    legal: {
+
+        enName: "Legal Assistance",
+        hiName: "कानूनी सहायता",
+        mlName: "നിയമ സഹായം",
+
+        enQuestions: [
+            "What is Tele-Law?",
+            "How can I get legal assistance?",
+            "Who can use Tele-Law services?"
+        ],
+
+        hiQuestions: [
+            "टेली-लॉ क्या है?",
+            "मैं कानूनी सहायता कैसे प्राप्त कर सकता हूँ?",
+            "टेली-लॉ सेवाओं का उपयोग कौन कर सकता है?"
+        ],
+
+        mlQuestions: [
+            "ടെലി-ലോ എന്താണ്?",
+            "നിയമ സഹായം എങ്ങനെ ലഭിക്കും?",
+            "ടെലി-ലോ സേവനങ്ങൾ ആർക്കൊക്കെ ഉപയോഗിക്കാം?"
+        ]
+
+    }
+
+};
+
+
+/* =====================================================
+   QUICK QUESTIONS
+===================================================== */
+
+function getQuickQuestions() {
+
+    if (currentLanguage === "hi") {
+
+        return [
+            {
+                icon: "bi-search",
+                text: "मैं अपने मामले की स्थिति कैसे जाँच सकता हूँ?"
+            },
+            {
+                icon: "bi-credit-card",
+                text: "मैं अपना ट्रैफिक चालान कैसे भर सकता हूँ?"
+            },
+            {
+                icon: "bi-phone",
+                text: "मैं ई-कोर्ट ऐप कैसे डाउनलोड कर सकता हूँ?"
+            },
+            {
+                icon: "bi-info-circle",
+                text: "टेली-लॉ क्या है?"
+            }
+        ];
+
+    }
+
+    if (currentLanguage === "ml") {
+
+        return [
+            {
+                icon: "bi-search",
+                text: "എന്റെ കേസിന്റെ സ്ഥിതി എങ്ങനെ പരിശോധിക്കാം?"
+            },
+            {
+                icon: "bi-credit-card",
+                text: "എന്റെ ട്രാഫിക് ചലാൻ എങ്ങനെ അടയ്ക്കാം?"
+            },
+            {
+                icon: "bi-phone",
+                text: "ഇ-കോടതി ആപ്പ് എങ്ങനെ ഡൗൺലോഡ് ചെയ്യാം?"
+            },
+            {
+                icon: "bi-info-circle",
+                text: "ടെലി-ലോ എന്താണ്?"
+            }
+        ];
+
+    }
+
+    return [
+        {
+            icon: "bi-search",
+            text: "How do I check my case status?"
+        },
+        {
+            icon: "bi-credit-card",
+            text: "How do I pay my traffic challan?"
+        },
+        {
+            icon: "bi-phone",
+            text: "How can I download the eCourts app?"
+        },
+        {
+            icon: "bi-info-circle",
+            text: "What is Tele-Law?"
+        }
+    ];
+
+}
+
+
+/* =====================================================
+   INITIALIZE CHAT
+===================================================== */
+
+function initializeChat() {
+
+    const t = translations[currentLanguage];
+
+    const quickQuestions = getQuickQuestions();
+
+    chatContainer.innerHTML = "";
+
+
+    const welcome = document.createElement("div");
+
+    welcome.className = "msg-bubble msg-bot";
+
+    welcome.innerHTML = t.welcome;
+
+    chatContainer.appendChild(welcome);
+
+
+    const quickTitle = document.createElement("div");
+
+    quickTitle.className = "quick-title";
+
+    quickTitle.textContent = t.tryAsking;
+
+    chatContainer.appendChild(quickTitle);
+
+
+    quickQuestions.forEach(function(item) {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+
+        button.className = "quick-question";
+
+        button.innerHTML = `
+            <i class="bi ${item.icon} me-1"></i>
+            ${item.text}
+        `;
+
+        button.onclick = function() {
+            askQuestion(item.text);
+        };
+
+        chatContainer.appendChild(button);
+
+    });
+
+}
+
+
+/* =====================================================
+   CHANGE LANGUAGE
+===================================================== */
+
+function changeLanguage() {
+
+    if (currentLanguage === "en") {
+        currentLanguage = "hi";
+    }
+    else if (currentLanguage === "hi") {
+        currentLanguage = "ml";
+    }
+    else {
+        currentLanguage = "en";
+    }
+
+    applyLanguage();
+}
+
+
+/* =====================================================
+   APPLY LANGUAGE
+===================================================== */
+
+function applyLanguage() {
+
+    const t = translations[currentLanguage];
+
+    document.title = t.pageTitle;
+
+    document.documentElement.lang = currentLanguage;
+
+
+    /* Top bar */
+
+    document.getElementById("governmentText").textContent =
+        t.government;
+
+    document.getElementById("ministryText").textContent =
+        t.ministry;
+
+
+    /* Header */
+
+    document.getElementById("dojTitle").textContent =
+        t.dojTitle;
+
+    document.getElementById("dojSubtitle").textContent =
+        t.dojSubtitle;
+
+    document.getElementById("languageButton").textContent =
+        t.languageButton;
+
+
+    /* Hero */
+
+    document.getElementById("heroBadge").innerHTML =
+        `<i class="bi bi-stars"></i> ${t.heroBadge}`;
+
+    document.getElementById("heroTitle").innerHTML =
+        t.heroTitle;
+
+    document.getElementById("heroDescription").textContent =
+        t.heroDescription;
+
+    document.getElementById("heroButton").innerHTML =
+        `<i class="bi bi-chat-dots-fill me-2"></i>
+         ${t.heroButton}`;
+
+    document.getElementById("exploreButton").textContent =
+        t.exploreButton;
+
+
+    /* Services */
+
+    document.getElementById("sectionLabel").textContent =
+        t.sectionLabel;
+
+    document.getElementById("servicesTitle").textContent =
+        t.servicesTitle;
+
+    document.getElementById("servicesDescription").textContent =
+        t.servicesDescription;
+
+
+    document.getElementById("caseTitle").textContent =
+        t.caseTitle;
+
+    document.getElementById("caseDescription").textContent =
+        t.caseDescription;
+
+
+    document.getElementById("trafficTitle").textContent =
+        t.trafficTitle;
+
+    document.getElementById("trafficDescription").textContent =
+        t.trafficDescription;
+
+
+    document.getElementById("ecourtsTitle").textContent =
+        t.ecourtsTitle;
+
+    document.getElementById("ecourtsDescription").textContent =
+        t.ecourtsDescription;
+
+
+    document.getElementById("streamingTitle").textContent =
+        t.streamingTitle;
+
+    document.getElementById("streamingDescription").textContent =
+        t.streamingDescription;
+
+
+    document.getElementById("judgesTitle").textContent =
+        t.judgesTitle;
+
+    document.getElementById("judgesDescription").textContent =
+        t.judgesDescription;
+
+
+    document.getElementById("legalTitle").textContent =
+        t.legalTitle;
+
+    document.getElementById("legalDescription").textContent =
+        t.legalDescription;
+
+
+    /* Chat */
+
+    document.getElementById("chatTitle").textContent =
+        t.chatTitle;
+
+    document.getElementById("onlineStatus").textContent =
+        t.online;
+
+    document.getElementById("typingText").textContent =
+        t.typing;
+
+    document.getElementById("userInput").placeholder =
+        t.placeholder;
+
+    document.getElementById("chatDisclaimer").textContent =
+        t.disclaimer;
+
+    document.getElementById("clearButton").title =
+        t.clearChat;
+
+
+    /* Footer */
+
+    document.getElementById("footerTitle").textContent =
+        t.footerTitle;
+
+    document.getElementById("footerMinistry").textContent =
+        t.footerMinistry;
+
+    document.getElementById("footerAssistant").textContent =
+        t.footerAssistant;
+
+
+    initializeChat();
+}
+
+
+/* =====================================================
+   TOGGLE CHAT
+===================================================== */
+
+function toggleChat() {
+
+    const isOpen =
+        chatWidget.style.display === "flex";
+
+    if (isOpen) {
+
+        chatWidget.style.display = "none";
+
+    } else {
+
+        chatWidget.style.display = "flex";
+
+        setTimeout(function() {
+            userInput.focus();
+        }, 100);
+
+    }
+}
+
+
+/* =====================================================
+   OPEN CHAT
+===================================================== */
+
+function openChat() {
+
+    chatWidget.style.display = "flex";
+
+    setTimeout(function() {
+        userInput.focus();
+    }, 100);
+}
+
+
+/* =====================================================
+   SERVICE CLICK
+===================================================== */
+
+function serviceClick(service) {
+
+    openChat();
+
+    const data = serviceData[service];
+
+    let questions;
+    let serviceName;
+
+    if (currentLanguage === "hi") {
+
+        questions = data.hiQuestions;
+        serviceName = data.hiName;
+
+    }
+    else if (currentLanguage === "ml") {
+
+        questions = data.mlQuestions;
+        serviceName = data.mlName;
+
+    }
+    else {
+
+        questions = data.enQuestions;
+        serviceName = data.enName;
+
+    }
+
+    const t = translations[currentLanguage];
+
+
+    const heading = document.createElement("div");
+
+    heading.className = "msg-bubble msg-bot";
+
+    heading.innerHTML = `
+        <strong>${serviceName}</strong>
+        <br><br>
+        ${t.questionPrompt}
+    `;
+
+    chatContainer.appendChild(heading);
+
+
+    questions.forEach(function(question) {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+
+        button.className = "quick-question";
+
+        button.innerHTML = `
+            <i class="bi bi-chat-left-text me-1"></i>
+            ${question}
+        `;
+
+        button.onclick = function() {
+            askQuestion(question);
+        };
+
+        chatContainer.appendChild(button);
+
+    });
+
+
+    chatContainer.scrollTop =
+        chatContainer.scrollHeight;
+}
+
+
+/* =====================================================
+   ASK QUICK QUESTION
+===================================================== */
+
+function askQuestion(question) {
+
+    userInput.value = question;
+
+    sendMessage();
+}
+
+
+/* =====================================================
+   FORMAT LINKS
+===================================================== */
+
+function formatLinks(text) {
+
+    const urlPattern =
+        /(https?:\/\/[^\s<]+)/g;
+
+    return text.replace(
+        urlPattern,
+        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+}
+
+
+/* =====================================================
+   ADD USER MESSAGE
+===================================================== */
+
+function addUserMessage(text) {
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "msg-bubble msg-user";
+
+    message.textContent =
+        text;
+
+    chatContainer.appendChild(message);
+}
+
+
+/* =====================================================
+   ADD BOT MESSAGE
+===================================================== */
+
+function addBotMessage(text) {
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "msg-bubble msg-bot";
+
+    message.innerHTML =
+        formatLinks(text);
+
+    chatContainer.appendChild(
+        message
+    );
+
+    /* Add rating bar */
+
+    addRatingBar(
+        message
+    );
+}
+
+/* =====================================================
+   ADD RATING BAR
+===================================================== */
+
+function addRatingBar(message) {
+
+    const t = translations[currentLanguage];
+
+    const ratingSection =
+        document.createElement("div");
+
+    ratingSection.className =
+        "rating-section";
+
+
+    /* Rating Question */
+
+    const ratingPrompt =
+        document.createElement("div");
+
+    ratingPrompt.className =
+        "rating-prompt";
+
+    ratingPrompt.textContent =
+        t.ratePrompt || "Are you satisfied with this answer?";
+
+    ratingSection.appendChild(
+        ratingPrompt
+    );
+
+
+    /* Stars */
+
+    const stars =
+        document.createElement("div");
+
+    stars.className =
+        "rating-stars";
+
+
+    for (let i = 1; i <= 5; i++) {
+
+        const star =
+            document.createElement("button");
+
+        star.type = "button";
+
+        star.className =
+            "rating-star";
+
+        star.innerHTML =
+            "★";
+
+        star.setAttribute(
+            "aria-label",
+            `${i} Star`
+        );
+
+
+        star.addEventListener(
+            "click",
+            function() {
+
+                /* Highlight selected stars */
+
+                const allStars =
+                    stars.querySelectorAll(
+                        ".rating-star"
+                    );
+
+                allStars.forEach(
+                    function(item, index) {
+
+                        if (index < i) {
+
+                            item.classList.add(
+                                "selected"
+                            );
+
+                        } else {
+
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                /* Thank-you message */
+
+                ratingPrompt.textContent =
+                    t.thankYouRating ||
+                    "Thank you for your rating!";
+
+            }
+        );
+
+
+        stars.appendChild(
+            star
+        );
+
+    }
+
+
+    ratingSection.appendChild(
+        stars
+    );
+
+
+    message.appendChild(
+        ratingSection
+    );
+
+}
+
+/* =====================================================
+   SEND MESSAGE
+===================================================== */
+
+async function sendMessage() {
+
+    const text =
+        userInput.value.trim();
+
+    if (!text) {
+        return;
+    }
+
+    const t =
+        translations[currentLanguage];
+
+
+    addUserMessage(text);
+
+    userInput.value = "";
+
+    chatContainer.scrollTop =
+        chatContainer.scrollHeight;
+
+
+    typingIndicator.style.display =
+        "block";
+
+    chatContainer.scrollTop =
+        chatContainer.scrollHeight;
+
+
+    try {
+
+        const response =
+            await fetch(
+                API_URL,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        message: text
+                    })
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Server error: " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        typingIndicator.style.display =
+            "none";
+
+
+        if (data.answer) {
+
+            addBotMessage(
+                data.answer
+            );
+
+        } else {
+
+            addBotMessage(
+                t.noAnswer
+            );
+
+        }
+
+
+    } catch (error) {
+
+        console.error(
+            "Chatbot Error:",
+            error
+        );
+
+        typingIndicator.style.display =
+            "none";
+
+        addBotMessage(
+            t.connectionError
+        );
+
+    }
+
+
+    chatContainer.scrollTop =
+        chatContainer.scrollHeight;
+}
+
+
+/* =====================================================
+   CLEAR CHAT
+===================================================== */
+
+function clearChat() {
+
+    initializeChat();
+
+}
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+userInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            sendMessage();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+initializeChat();
+
+</script>
+
+</body>
+</html>
