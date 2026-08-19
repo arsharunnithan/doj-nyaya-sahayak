@@ -564,7 +564,7 @@
    BACKEND API
 ===================================================== */
 
-const API_URL = "http://127.0.0.1:5000/chat";
+const API_URL = "http://localhost:8080/chat";
 
 
 /* =====================================================
@@ -1634,7 +1634,7 @@ function addBotMessage(text) {
         "msg-bubble msg-bot";
 
     message.innerHTML =
-        formatLinks(text);
+        formatLinks(text).replace(/\n/g, "<br>");
 
     chatContainer.appendChild(
         message
@@ -1767,6 +1767,41 @@ function addRatingBar(message) {
 }
 
 /* =====================================================
+   ADD QUICK-REPLY CHIPS (related follow-up questions)
+===================================================== */
+
+function addQuickReplyChips(relatedQuestions) {
+
+    if (!relatedQuestions || relatedQuestions.length === 0) {
+        return;
+    }
+
+    relatedQuestions.forEach(function(question) {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+
+        button.className = "quick-question";
+
+        button.innerHTML = `
+            <i class="bi bi-chat-left-text me-1"></i>
+            ${question}
+        `;
+
+        button.onclick = function() {
+            askQuestion(question);
+        };
+
+        chatContainer.appendChild(button);
+
+    });
+
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+
+/* =====================================================
    SEND MESSAGE
 ===================================================== */
 
@@ -1812,7 +1847,8 @@ async function sendMessage() {
                     },
 
                     body: JSON.stringify({
-                        message: text
+                        question: text,
+                        language: currentLanguage
                     })
                 }
             );
@@ -1840,6 +1876,10 @@ async function sendMessage() {
 
             addBotMessage(
                 data.answer
+            );
+
+            addQuickReplyChips(
+                data.relatedQuestions
             );
 
         } else {
